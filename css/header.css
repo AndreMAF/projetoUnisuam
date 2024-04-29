@@ -1,0 +1,163 @@
+*{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #b4b4b4;
+}
+
+/* --- CABEÇALHO --- */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: 80px;
+    padding: 5px 25px;
+
+    border-radius: 0 0 10px 10px;
+}
+
+.logo{
+    font-size: 24px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+.menu a{
+    font-size: 20px;
+    color: #555555;
+}
+
+.doacao{ 
+    padding: 7px 35px;
+    background-color: #2EAF79;
+    border: none;
+    border-radius: 30px;
+    color: #F3F3F3;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* --- MAIN --- */
+
+main{
+    padding: 2rem 3rem;
+}
+
+
+/* MAIN - eventos */
+
+.container-eventos{
+    display: flex;
+    gap: 8rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    
+    overflow: hidden;
+}
+
+.eventos{
+    display: flex;
+    gap: 8rem;
+    width: 100%;
+
+    transition: .5s;
+
+}
+
+.evento{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    border-radius: 2rem;
+
+    background-color: rgb(250, 250, 250);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.evento img{
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.evento div{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bottom-evento{
+    align-items: center;
+}
+
+
+
+.titulo-evento{
+    font-size: 30pt;
+    text-align: center;
+}
+
+.descricao-evento{
+    font-size: 12pt;
+    color: #000000;
+    text-align: center;
+}
+
+.evento a{
+    
+    background-color: #2EAF79;
+    color: white;
+    font-size: 15pt;
+    
+    padding: .6rem 2.5rem;
+    border: 1px solid #2EAF79;
+    border-radius: 2rem;
+    transition: ease-in .2s;
+}
+
+.evento a:hover{
+    background-color: white;
+    color: #2EAF79;
+}
+
+.data-evento{
+    margin-top: auto;
+    font-size: 12pt;
+    color: #313131;
+}
+
+.evento-proximo, .evento-anterior{
+    height: 2.5rem;
+    position: absolute;
+    background-color: #0033be;
+    border-radius: 50%;
+}
+.evento-proximo, .evento-anterior:hover{
+    cursor: pointer;
+}
+
+.evento-anterior{
+    scale: -1;
+    left: 4rem;
+    z-index: 1;
+    display: none;
+}
+
+.evento-proximo{
+    right: 4rem;
+}
