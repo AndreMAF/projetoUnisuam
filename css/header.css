@@ -1,0 +1,49 @@
+*{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #b4b4b4;
+}
+
+/* --- CABEÇALHO --- */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    height: 80px;
+    padding: 5px 25px;
+
+    border-radius: 0 0 10px 10px;
+}
+
+.logo{
+    font-size: 24px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+.menu a{
+    font-size: 20px;
+    color: #555555;
+}
+
+.doacao{ 
+    padding: 7px 35px;
+    background-color: #2EAF79;
+    border: none;
+    border-radius: 30px;
+    color: #F3F3F3;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
