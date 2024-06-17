@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Cadastro</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/login.js" defer></script>
+</head>
+<body>
+    <div class="avisos">Alou</div>
+    
+    <div class="container">
+
+        <div class="imagem">
+            <img src="./imgs/fotoLogin.png" alt="">
+        </div>
+
+        <div class="cadastro">
+
+            <div class="titulo-cad">
+                <span>Cadastre-se</span>
+                <span>ou</span>
+                <span class="span-atual" onclick="irLogin()">Entre</span>
+            </div >
+
+            <form action="#">
+
+                <div class="inputs-cad">
+                    <label for="">
+                        Nome Completo
+                        <input type="text" placeholder="Insira seu nome completo" class="input-nome" onkeyup="validacaoNome()">
+                    </label>
+                    <label for="">
+                        Email
+                        <input type="email" placeholder="Insira seu melhor email" class="input-email" onkeyup="validacaoEmail()" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Email inválido">
+                    </label>
+                    <label for="" class="senha">
+                        Senha
+                        <input type="password" placeholder="Insira sua senha" class="input-senha" onkeyup="validacaoSenha()">
+                        <img src="./imgs/olho.png" class="olho" onclick="Escondesenha()">
+                    </label>
+                    <label for="">
+                        CPF
+                        <input type="text" placeholder="Insira seu número de CPF" class="input-cpf" oninput="entrarCPF()" onkeyup="validacaoCPF()" maxlength="14">
+                    </label>
+                    <label for="">
+                        Data de Nascimento
+                        <input type="date" class="input-data" min="1930-01-01" onchange="validacaoNasc()">
+                    </label>
+                </div>
+
+                <div class="btns-cad">
+                    <label for="">Ao cadastrar você concorda com os <a href="#">termos e condições de uso</a></label>
+                    <div>
+                        <input type="submit" value="Cadastrar" class="cadastrar">
+                        <a href="#" onclick="irLogin()" class="btn-cad">Já tenho uma conta</a>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+        <form class="login">
+
+            <div class="titulo-log">
+                <span class="span-atual" onclick="irCadastro()">Cadastre-se</span>
+                <span>ou</span>
+                <span>Entre</span>
+            </div>
+
+            <div class="inputs-log">
+                <label for="">
+                    Email
+                    <input type="email" placeholder="Insira seu email">
+                </label>
+                <label for="">
+                    Senha
+                    <input type="password" placeholder="********">
+                </label>
+            </div>
+
+            <div class="btns-log">
+                <div>
+                    <input type="submit" value="Entrar">
+                    <a href="#" onclick="irCadastro()">Ainda não tenho conta</a>
+                </div>
+            </div>
+
+        </form>
+
+
+    </div>
+
+</body>
+</html>
