@@ -18,9 +18,10 @@ body{
 .container{
     display: flex;
     position: relative;
-    padding: 30px;
+    padding: 10px 10px 10px 10px;
     justify-content: center;
-    width: 80%;
+    width: 60%;
+    height: 80%;
 
     border-radius: 18px;
 
@@ -29,8 +30,12 @@ body{
 }
 
 .cadastro, .login{
-    padding: 50px;
+    display: block;
+    padding: 20px 20px 10px 30px;
     width: 50%;
+    height: 100%;
+    background-color: #3C3C3C;
+    overflow: auto;
 }
 
 label{
@@ -73,7 +78,8 @@ span{
 }
 
 .titulo-cad, .titulo-log{
-    padding: 0 0 30px 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .btns-cad div input, .btns-log div input{
@@ -143,7 +149,8 @@ span{
     background-color: #2F9759;
     padding: 50px;
     border-radius: 18px 0 0 18px;
-    z-index: 2;
+    z-index: 4;
+    overflow: hidden;
 
     transition: transform .7s ease-in-out;
     
@@ -198,4 +205,80 @@ input[type="checkbox"]{
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+
+@media screen{
+
+    @media (max-width:1400px) {
+        .container{
+            width: 70%;
+        }
+    }
+
+    @media (max-width:1280px){
+        .container{
+            width: 80%;
+        }
+    }
+
+    @media (max-width:1000px) {
+        .container{
+            width: 90%;
+        }
+    }
+
+    @media (min-width:801px) {
+        .login{
+            z-index: 0;
+        }
+        .cadastro{
+            z-index: 0;
+        }
+    }
+
+    @media (max-width:800px) {
+        .container{
+            width: 100%;
+        }
+        .imagem{
+            display: none;
+        }
+        .login{
+            position: absolute;
+            width: 100%;
+        }
+        .cadastro{
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+        @media (max-height:900px) {
+            .container{
+                height: 100%;
+                border-radius: 0;
+            }
+        }
+    }
+
+    
+ 
+
+
+
+    @media (max-height:850px) {
+        .titulo-cad, .titulo-log{
+            margin-top: 0px;
+        }
+    }
+
+    @media (max-height:700px) {
+        .container{
+            height: 100%;
+        }
+
+
+        
+    }
+    
 }
