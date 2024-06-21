@@ -4,236 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Unisuam</title>
+    <title>Movimente-se Rio</title>
+
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/eventos.js" defer></script>
-    <script src="./js/slider.js" defer></script>
+    <link rel="stylesheet" href="./css/index.css">
+
 </head>
 
 <body>
 
-    <header>
-        <a class="logo" href="index.html"><img src="#" alt="Logo">Nome do site</a>
+    <section class="container-fundo">
 
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Fotos</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Calendário</a></li>
-                <li><input class="doacao" type="button" value="Doação"></li>
-            </ul>
-        </nav>
+        <img src="./imgs/fundoPista.jpg" class="fundo" alt="">
+        <header>
+            <a class="logo" href="index.html"><img src="#" alt="Logo">Movimente-se Rio</a>
 
-    </header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Fotos</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">Calendário</a></li>
+                    <li><input class="doacao" type="button" value="Doação"></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <section class="principal">
+
+            <h1>Unindo Corações Através do Esporte</h1>
+            <p>Uma ONG dedicada a conectar pessoas de todas as idades e habilidades</p>
+            <button>Participe já!</button>
+
+            <img class="pessoa futebol" src="./imgs/futebol-semfundo.png" alt="">
+            <img class="pessoa basquete" src="./imgs/basquete-semfundo.png" alt="">
+        </section>
+
+
+    </section>
 
     <main>
+        <div class="equipe">
+            <img src="./imgs/equipe.jpg" alt="Imagem da equipe">
+            <div>
+                <p>A Movimente-se Rio é uma organização não governamental dedicada a promover esportes inclusivos para
+                    pessoas com deficiência. Nossa missão é criar um ambiente onde todos possam participar, se divertir
+                    e se unir através do esporte.</p>
+                <a class="btn-saiba-mais">Saiba Mais</a>
+            </div>
+        </div>
 
-        <section class="slider">
-            <svg onclick="voltar()" class="left" fill="#000000" height="50px" width="50px" version="1.1"  viewBox="0 0 55.752 55.752" xml:space="preserve">
-                <g>
-                    <path d="M43.006,23.916c-0.28-0.282-0.59-0.52-0.912-0.727L20.485,1.581c-2.109-2.107-5.527-2.108-7.637,0.001
-		c-2.109,2.108-2.109,5.527,0,7.637l18.611,18.609L12.754,46.535c-2.11,2.107-2.11,5.527,0,7.637c1.055,1.053,2.436,1.58,3.817,1.58
-		s2.765-0.527,3.817-1.582l21.706-21.703c0.322-0.207,0.631-0.444,0.912-0.727c1.08-1.08,1.598-2.498,1.574-3.912
-		C44.605,26.413,44.086,24.993,43.006,23.916z" />
-                </g>
-            </svg>
 
-            <div class="imagens-slider">
-                <div class="imagem-slider imagem-slider-1">
-                    <h2>Título da Imagem</h2>
-                    <h3>Titulo no mouseover</h3>
-                    <p>Teste de parágrafo escrito no mouseover</p>
-                    <img src="./imgs/slider-1.png" alt="">
+        <section class="main-eventos">
+            <h2>Veja alguns de nossos eventos</h2>
+
+            <section>
+
+                <div class="container-evento tenis">
+                    <img src="./imgs/evento-tenis.png" alt="">
+                    <div>
+                        <h3>Tênis</h3>
+                        <p>Entre em quadra e não perca esta oportunidade única de experimentarem a emoção e uma
+                            competição saudável ou apenas para se divertir e conhecer novas pessoas. Venha jogar conosco
+                            e fazer parte dessa jornada!</p>
+                        <a href="">SAIBA MAIS</a>
+                    </div>
                 </div>
-                <div class="imagem-slider imagem-slider-2">
-                    <h3>Titulo no mouseover</h3>
-                    <p>Teste de parágrafo escrito no mouseover</p>
+
+                <div class="container-evento futebol">
                     <img src="./imgs/slider-2.jpeg" alt="">
+                    <div>
+                        <h3>Futebol</h3>
+                        <p>Chute com Paixão! Junte-se a nós no campo e não perca esta oportunidade única de vivenciar a
+                            emoção do futebol. Seja para competir de forma saudável ou apenas para se divertir e
+                            conhecer novas pessoas, venha jogar conosco e fazer parte dessa jornada esportiva!</p>
+                        <a href="">SAIBA MAIS</a>
+                    </div>
                 </div>
-                <div class="imagem-slider imagem-slider-3">
-                    <h3>Titulo no mouseover</h3>
-                    <p>Teste de parágrafo escrito no mouseover</p>
-                    <img src="./imgs/slider-3.jpeg" alt="">
-                </div>
-                <div class="imagem-slider imagem-slider-4">
-                    <h3>Titulo no mouseover</h3>
-                    <p>Teste de parágrafo escrito no mouseover</p>
-                    <img src="./imgs/slider-4.jpeg" alt="">
-                </div>
-            </div>
 
-            <svg onclick="avancar()" class="right" fill="#000000" height="50px" width="50px" version="1.1"  viewBox="0 0 55.752 55.752" xml:space="preserve">
-                <g>
-                    <path d="M43.006,23.916c-0.28-0.282-0.59-0.52-0.912-0.727L20.485,1.581c-2.109-2.107-5.527-2.108-7.637,0.001
-		c-2.109,2.108-2.109,5.527,0,7.637l18.611,18.609L12.754,46.535c-2.11,2.107-2.11,5.527,0,7.637c1.055,1.053,2.436,1.58,3.817,1.58
-		s2.765-0.527,3.817-1.582l21.706-21.703c0.322-0.207,0.631-0.444,0.912-0.727c1.08-1.08,1.598-2.498,1.574-3.912
-		C44.605,26.413,44.086,24.993,43.006,23.916z" />
-                </g>
-            </svg>
+                <div class="container-evento basquete">
+                    <img src="./imgs/slider-2.jpeg" alt="">
+                    <div>
+                        <h3>Basquete</h3>
+                        <p>Chute com Paixão! Junte-se a nós no campo e não perca esta oportunidade única de vivenciar a
+                            emoção do futebol. Seja para competir de forma saudável ou apenas para se divertir e
+                            conhecer novas pessoas, venha jogar conosco e fazer parte dessa jornada esportiva!</p>
+                        <a href="">SAIBA MAIS</a>
+                    </div>
+                </div>
+
+            </section>
+
+            <a href="" class="outros-eventos">Veja outros de nossos eventos</a>
         </section>
 
-        <section class="container-eventos">
+        <section class="numeros">
 
-            <div class="wave">
-                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 98">
-                    <path class="s0" d="m0 44c0 0 306.5-98.9 640 0 333.5 98.9 640 0 640 0v54c-1280 0-1280 0-1280 0" />
-                </svg>
+            <div>
+                <span class="numero">12</span>
+                <span class="frase">Anos atuando</span>
             </div>
-            <div class="evento">
-                <div class="main-evento">
-                    <div class="info-evento">
-                        <h1>Tênis</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat odit possimus repudiandae
-                            eligendi quae beatae porro laboriosam deserunt! Voluptatum ullam nulla debitis culpa
-                            reprehenderit adipisci? Nesciunt facere dolores reiciendis totam!</p>
-                        <input type="button" value="Ver mais eventos">
-                    </div>
-                    <div class="img-evento">
-                        <img id="img-tenis" src="./imgs/evento-tenis.png" alt="Tênis">
-                        <img id="img-basquete" src="./imgs/evento-basquete.jpg" alt="Basquete">
-                        <img id="img-futebol" src="./imgs/evento-futebol.jpg" alt="Futebol">
-                        <img id="img-volei" src="./imgs/evento-volei.jpg" alt="Volei">
-                        <img id="img-raquete" src="./imgs/evento-raquete.jpg" alt="Tênis de Mesa">
-                    </div>
-                </div>
-                <nav>
-                    <svg class="i-tenis" version="1.0" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid meet">
-                        <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#000000"
-                            stroke="none">
-                            <path d="M1554 2954 c26 -180 126 -427 250 -613 137 -206 339 -407 543 -541
-                    183 -121 430 -221 607 -246 l49 -7 -7 74 c-72 743 -632 1303 -1375 1375 l-74
-                    7 7 -49z" />
-                            <path d="M1235 2975 c-584 -106 -1055 -549 -1189 -1116 -14 -57 -28 -130 -31
-                    -161 l-7 -57 38 -6 c186 -30 327 -75 499 -160 411 -201 743 -537 941 -950 75
-                    -156 121 -304 149 -477 7 -45 5 -44 136 -22 371 64 728 291 953 607 134 189
-                    236 450 261 669 l7 56 -48 7 c-83 12 -245 55 -334 89 -619 239 -1110 808
-                    -1232 1427 -25 125 -14 118 -143 94z" />
-                            <path d="M4 1378 c72 -741 633 -1302 1374 -1374 48 -4 72 -3 72 4 0 31 -32
-                    170 -60 254 -34 107 -134 312 -195 398 -155 222 -315 382 -535 535 -87 61
-                    -291 161 -398 195 -84 28 -223 60 -254 60 -7 0 -8 -24 -4 -72z" />
-                        </g>
-                    </svg>
-                    <svg class="i-basquete" version="1.0" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid meet">
-                        <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#000000"
-                            stroke="none">
-                            <path d="M1292 2984 c-93 -13 -233 -47 -286 -69 -28 -12 -28 -12 70 -65 113
--60 253 -145 336 -202 l57 -40 40 32 c67 54 123 128 132 174 14 71 11 153 -7
-170 -20 20 -205 20 -342 0z" />
-                            <path d="M1800 2892 c0 -138 -26 -196 -142 -318 l-57 -60 94 -82 95 -82 62 38
-c226 137 386 201 593 237 l40 7 -35 29 c-143 119 -356 229 -540 280 -41 11
--83 23 -92 25 -16 5 -18 -3 -18 -74z" />
-                            <path d="M674 2748 c-144 -94 -323 -273 -416 -413 -69 -105 -123 -204 -115
--212 3 -2 40 7 83 21 115 36 211 59 471 110 241 48 330 74 448 133 81 41 195
-112 195 121 0 4 -8 12 -17 18 -155 99 -242 150 -370 216 -85 43 -158 78 -162
-78 -4 0 -57 -32 -117 -72z" />
-                            <path d="M2520 2485 c-126 -21 -249 -54 -322 -84 -57 -24 -222 -113 -277 -150
--11 -7 -1 -24 50 -83 52 -58 106 -125 135 -167 2 -2 43 7 91 20 69 18 114 23
-208 24 114 0 123 -2 188 -32 98 -46 186 -112 293 -220 104 -103 105 -103 78
-23 -25 123 -52 202 -114 329 -77 161 -212 357 -243 354 -7 -1 -46 -7 -87 -14z" />
-                            <path d="M1385 2354 c-184 -125 -342 -187 -610 -239 -378 -73 -536 -115 -657
--176 -54 -27 -58 -32 -72 -82 -29 -105 -41 -205 -40 -357 0 -174 16 -286 65
--445 50 -160 190 -434 203 -395 2 8 12 40 21 70 27 89 138 307 210 415 233
-348 678 785 1093 1075 l64 44 -34 28 c-71 61 -147 118 -155 117 -4 0 -44 -25
--88 -55z" />
-                            <path d="M1750 2142 c-13 -9 -90 -66 -170 -126 -603 -454 -1037 -973 -1154
--1380 -41 -139 -40 -141 59 -234 203 -192 512 -346 761 -378 l50 -6 31 73 c87
-209 165 487 309 1097 95 402 155 553 272 672 57 59 62 67 51 87 -11 20 -177
-214 -182 212 -1 0 -13 -8 -27 -17z" />
-                            <path d="M2275 1883 c-38 -8 -72 -16 -74 -18 -2 -3 24 -60 57 -127 155 -316
-261 -722 302 -1153 7 -66 13 -121 15 -123 6 -7 119 127 169 202 138 207 225
-452 251 706 l7 66 -75 89 c-41 50 -114 129 -163 176 -192 185 -296 224 -489
-182z" />
-                            <path d="M2008 1752 c-92 -102 -136 -221 -238 -652 -123 -520 -206 -820 -275
--995 -19 -49 -35 -93 -35 -97 0 -13 127 -9 240 7 243 35 462 121 660 259 l64
-45 -2 83 c-12 354 -113 832 -243 1143 -43 105 -112 238 -126 242 -5 2 -26 -14
--45 -35z" />
-                        </g>
-                    </svg>
-                    <svg class="i-futebol" version="1.0" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid meet">
-                        <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#000000"
-                            stroke="none">
-                            <path d="M1295 2984 c-346 -53 -628 -197 -867 -442 -325 -335 -478 -794 -412
-                        -1241 49 -336 180 -604 412 -843 524 -539 1330 -609 1951 -170 171 121 360
-                        342 457 535 192 381 215 818 63 1212 -153 395 -470 712 -868 866 -224 87 -505
-                        119 -736 83z m-49 -322 l189 -138 0 -259 0 -260 -76 -55 c-42 -30 -131 -94
-                        -197 -142 -67 -49 -129 -88 -139 -87 -10 1 -121 35 -248 77 l-230 77 -72 220
-                        c-39 121 -72 225 -72 232 -1 19 186 209 264 268 41 31 107 74 146 97 75 43
-                        216 108 235 108 7 0 97 -62 200 -138z m869 67 c66 -32 159 -89 206 -124 88
-                        -66 280 -257 278 -278 0 -7 -33 -111 -72 -232 l-72 -220 -230 -77 c-127 -42
-                        -238 -76 -248 -77 -10 -1 -72 38 -139 87 -66 48 -155 112 -197 142 l-76 55 0
-                        260 0 259 189 139 c159 116 194 137 215 132 14 -3 80 -33 146 -66z m-1375
-                        -1044 c278 -89 257 -79 274 -135 8 -27 42 -133 76 -238 l62 -189 -148 -206
-                        -149 -207 -242 0 -242 0 -29 43 c-71 102 -139 260 -177 407 -23 91 -51 288
-                        -43 309 6 17 389 290 401 286 7 -2 104 -34 217 -70z m1945 -68 c99 -72 184
-                        -134 189 -138 12 -11 -11 -215 -35 -309 -37 -143 -112 -318 -181 -417 l-29
-                        -43 -242 0 -242 1 -149 206 -148 206 62 189 c34 105 68 212 76 238 17 56 -7
-                        45 299 144 110 35 204 62 210 58 5 -3 91 -64 190 -135z m-781 -773 l149 -205
-                        -73 -222 c-39 -122 -77 -227 -83 -234 -7 -6 -59 -22 -117 -34 -151 -33 -409
-                        -33 -560 0 -58 12 -110 28 -117 34 -6 7 -44 112 -83 234 l-73 222 149 205 149
-                        205 255 0 255 0 149 -205z" />
-                        </g>
-                    </svg>
-                    <svg class="i-volei" version="1.0" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid meet">
-                        <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#000000"
-                            stroke="none">
-                            <path d="M1265 2984 c-341 -53 -677 -240 -902 -503 -206 -241 -331 -538 -359
--852 l-6 -75 78 -36 c98 -44 248 -93 334 -107 36 -6 74 -14 86 -16 21 -5 21
--1 27 183 4 134 12 215 27 287 96 455 377 861 758 1094 28 18 52 35 52 37 0 2
--1 4 -2 3 -2 -1 -43 -7 -93 -15z" />
-                            <path d="M1687 2950 c-511 -190 -880 -632 -973 -1165 -18 -103 -26 -387 -11
--401 14 -14 250 15 369 45 115 29 300 100 327 126 8 8 17 51 22 107 29 316
-149 619 346 873 72 93 241 261 306 305 20 14 37 27 37 30 0 15 -303 112 -339
-110 -3 -1 -41 -14 -84 -30z" />
-                            <path d="M2219 2728 c-78 -54 -319 -288 -319 -310 0 -7 37 -32 83 -56 127 -65
-262 -166 382 -287 139 -139 227 -262 314 -440 107 -215 151 -376 174 -627 l13
--133 32 85 c73 188 108 406 99 610 -22 472 -256 895 -645 1168 l-60 42 -73
--52z" />
-                            <path d="M1745 2169 c-80 -158 -136 -358 -151 -535 l-7 -80 64 -44 c274 -185
-506 -481 624 -795 36 -95 82 -276 90 -358 4 -37 10 -67 13 -67 13 0 114 86
-184 157 74 76 77 80 93 153 22 105 31 354 16 474 -54 424 -299 826 -645 1058
--78 51 -215 128 -231 128 -2 0 -25 -41 -50 -91z" />
-                            <path d="M1415 1364 c-209 -101 -459 -155 -715 -154 -239 0 -400 29 -608 110
--42 16 -78 27 -81 24 -8 -8 25 -191 48 -264 18 -56 28 -73 75 -113 178 -153
-402 -272 618 -327 355 -91 725 -52 1053 112 91 45 195 111 195 123 0 28 -121
-195 -210 289 -81 86 -272 238 -297 235 -4 0 -39 -16 -78 -35z" />
-                            <path d="M2025 674 c-124 -86 -360 -181 -562 -226 -86 -20 -127 -22 -333 -22
--205 0 -248 3 -333 22 -145 32 -302 87 -421 147 l-106 53 18 -31 c9 -17 75
--91 147 -163 231 -233 471 -363 788 -426 158 -31 396 -31 554 0 123 25 284 77
-373 122 l56 28 -8 97 c-12 136 -92 436 -116 434 -4 0 -29 -16 -57 -35z" />
-                        </g>
-                    </svg>
-                    <svg class="i-raquete" version="1.0" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid meet">
-                        <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#000000"
-                            stroke="none">
-                            <path d="M296 2983 c-141 -43 -229 -164 -229 -313 0 -61 5 -86 28 -134 34 -71
-85 -124 151 -157 41 -20 64 -24 144 -24 80 0 103 4 144 24 137 68 213 232 173
-372 -54 185 -234 287 -411 232z" />
-                            <path d="M1680 2874 c-239 -37 -492 -163 -697 -346 -186 -166 -304 -351 -359
--567 l-19 -71 671 -671 670 -670 89 26 c50 14 131 46 181 70 325 157 611 528
-700 910 15 62 19 119 19 250 0 186 -13 251 -78 400 -69 159 -221 350 -369 463
--235 180 -517 252 -808 206z" />
-                            <path d="M590 1593 c0 -75 18 -169 52 -283 28 -92 32 -119 32 -215 0 -79 -5
--120 -17 -146 -21 -47 -105 -125 -323 -299 -266 -212 -274 -221 -274 -307 0
--71 39 -144 118 -222 107 -107 209 -144 288 -103 48 25 58 35 235 257 180 225
-253 303 304 326 30 14 64 19 140 19 106 0 119 -3 259 -44 76 -22 274 -51 285
--41 2 2 -245 252 -548 554 l-551 551 0 -47z" />
-                        </g>
-                    </svg>
-
-
-
-                </nav>
-
+            <div>
+                <span class="numero">672</span>
+                <span class="frase">Corações<br>impactados</span>
+            </div>
+            <div>
+                <span class="numero">485</span>
+                <span class="frase">Eventos<br>realizados</span>
             </div>
 
         </section>
+
 
     </main>
 
