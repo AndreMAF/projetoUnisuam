@@ -1,5 +1,4 @@
 //alternar login/cadastro
-let login = true; //serve pra nada?
 const img = document.querySelector('.imagem');
 const loginDiv = document.querySelector('.login');
 const cadDiv = document.querySelector('.cadastro');
@@ -13,7 +12,6 @@ function irCadastro(){
     loginDiv.style.zIndex = '0'
     cadDiv.style.zIndex = '1'
 
-    login = false //serve pra nada?
 }
 
 function irLogin(){
@@ -23,9 +21,6 @@ function irLogin(){
     loginDiv.style.zIndex = '1'
     cadDiv.style.zIndex = '0'
 
-    
-
-    login = true //serve pra nada?
 }
 
 
@@ -55,6 +50,7 @@ const senha = document.querySelector('.input-senha');
 const cpf = document.querySelector('.input-cpf');
 const data = document.querySelector('.input-data');
 const btnCad = document.querySelector('.cadastrar');
+const btnLog = document.querySelector('.logar')
 const aviso = document.querySelector('.avisos');
 
 const date = new Date();
@@ -72,8 +68,9 @@ hoje = ano+'-'+mes+'-'+dia;
 
 document.querySelector(".input-data").setAttribute("max", hoje);
 
-btnCad.addEventListener('click', () => {
-    if(!nome.value || nome.value.length < 15 || nome.value.length > 60 || !email.value || !senha.value || senha.value.length < 8 || /[@!#$%^&*()/\\]/.test(nome.value) || /[0-9]/.test(nome.value) || senha.value.length > 60 || !cpf.value || !data.value){
+btnCad.addEventListener('click', (e) => {
+    e.preventDefault()
+    if(!nome.value || nome.value.length < 15 || nome.value.length > 60 || !email.value || !/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i.test(email.value) || !senha.value || senha.value.length < 8 || /[@!#$%^&*()/\\]/.test(nome.value) || /[0-9]/.test(nome.value) || senha.value.length > 60 || !cpf.value || !validadorCPF() || !data.value || (ano - data.value.substring(0, 4) < 18)){
         aviso.style.display = 'block'
         aviso.style.color = 'red'
         aviso.innerHTML = 'verifique novamente os campos:'
@@ -81,6 +78,28 @@ btnCad.addEventListener('click', () => {
         setTimeout(() => {
             aviso.style.display = 'none'
         }, 5000)
+    }
+    else{
+        localStorage.setItem('nome', nome.value)
+        localStorage.setItem('email', email.value)
+        localStorage.setItem('senha', senha.value)
+
+        aviso.style.display = 'block'
+        aviso.style.color = 'green'
+        aviso.innerHTML = 'Cadastro realizado com sucesso!'
+        
+        setTimeout(() => {
+            irLogin()
+            nome.value = ''
+            email.value = ''
+            senha.value = ''
+            cpf.value = ''
+            data.value = ''
+        }, 500)
+        setTimeout(() => {
+            aviso.style.display = 'none'
+        }, 5000)
+        
     }
 
     if(nome.value.length < 15 || nome.value.length > 60 || /[@!#$%^&*()/\\]/.test(nome.value) || /[0-9]/.test(nome.value)){
@@ -109,6 +128,33 @@ btnCad.addEventListener('click', () => {
         data.style.borderColor = 'red'
     }
     
+})
+
+
+const emailLog = document.querySelector('.emailLog')
+const senhaLog = document.querySelector('.senhaLog')
+let logado = false;
+localStorage.setItem('logado', logado)
+
+btnLog.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    if(emailLog.value == localStorage.getItem('email') && senhaLog.value == localStorage.getItem('senha')){
+        window.location.replace('index.html')
+        logado = true;
+        localStorage.setItem('logado', logado)
+    }
+
+    else{
+        aviso.style.display = 'block'
+        aviso.style.color = 'red'
+        aviso.innerHTML = 'Credenciais inválidas!'
+        setTimeout(() => {
+            aviso.style.display = 'none'
+        }, 3000)
+    }
+    
+
 })
 
 

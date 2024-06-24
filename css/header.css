@@ -24,6 +24,11 @@ header{
     text-decoration: none;
     font-size: 24px;
     color: black;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 60px;
 }
 
 .menu{
@@ -41,7 +46,7 @@ header{
     
 }
 
-.doacao{ 
+.menu .doacao{ 
     padding: 7px 35px;
     background-color: #2EAF79;
     border: none;
@@ -51,4 +56,171 @@ header{
     font-size: 20px;
 
     font-family: 'itim';
+}
+
+.icon-tema{
+    width: 25px;
+    cursor: pointer;
+}
+
+.nomeHeader{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-responsivo{
+    display: none;
+    cursor: pointer;
+    z-index: 10000;
+    
+}
+
+.menu-responsivo img{
+    height: 40px;
+    
+}
+
+
+.menu-ativo{
+    display: block !important;
+    position: absolute;
+    right: 0;
+    background-color: rgba(112, 112, 112, 1);
+    padding: 100px 20px 20px 20px;
+    border-radius: 0 0 0 20px;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-ativo li a{
+    font-size: 50px;
+    color: #fff;
+}
+
+.menu-ativo .tema-container{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 10px 0;
+}
+
+.menu-ativo .doacao{
+    width: 100%;
+}
+
+
+
+
+
+
+
+/*Dark Mode*/
+
+
+.dark{
+    background-color: #060606;
+
+}
+
+.dark .icon-tema{
+    filter: invert();
+}
+
+.dark header a{
+    color: #EEEEEE;
+}
+
+.dark h1, .dark h2, .dark h3{
+    color: #fff;
+}
+
+.dark .principal p{
+    color: #D4D4D4;
+}
+
+.dark p{
+    color: #f4f4f4;
+}
+
+.dark a{
+    color: #fff;
+}
+
+.dark div .btn-saiba-mais{
+    border: 2px solid #fff;
+}
+
+.dark h2{
+    color: #fff;
+}
+
+.dark .container-evento p{
+    color: #000;
+}
+
+.dark .contato-geral{
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.dark footer{
+    color: #fff;
+}
+
+.dark .nomeHeader{
+    color: #fff;
+}
+
+.dark .container-evento{
+    background-color: #353535;
+    color: #fff;
+    border-color: #fff;
+}
+.dark .container-evento p{
+    color: #e7e7e7;
+}
+
+.dark .tenis div a{
+    border: 2px solid #4273bc;
+    color: #4273bc;
+}
+
+.dark .futebol div a {
+    border: 2px solid #7dad27;
+    color: #7dad27;
+}
+
+.dark .basquete div a {
+    border: 2px solid #d9523e;
+    color: #d9523e;
+}
+
+.dark .menu-responsivo img{
+    filter: invert();
+}
+
+.dark span{
+    color: #fff;
+}
+
+
+@media screen {
+    @media (max-width:1700px) {
+        header{
+            padding: 50px 100px;
+        }
+    }
+    @media (max-width:1500px) {
+        header{
+            padding: 50px 50px;
+        }
+    }
+    @media (max-width:1370px) {
+        header .menu{
+            display: none;
+        }
+        header .menu-responsivo{
+            display: block;
+            margin-left: auto;
+        }
+    }
 }

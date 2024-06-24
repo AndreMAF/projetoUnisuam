@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/index.css">
 
+    <script src="./js/main.js" defer></script>
+    <script src="./js/tema.js" defer></script>
+    <script src="./js/responsivo.js" defer></script>
 </head>
 
 <body>
@@ -17,25 +20,30 @@
 
         <img src="./imgs/fundoPista.jpg" class="fundo" alt="">
         <header>
-            <a class="logo" href="index.html"><img src="#" alt="Logo">Movimente-se Rio</a>
-
+            <a class="logo" href="index.html"><img src="./imgs/logo.png" alt="Logo">Movimente-se Rio</a>
+    
+            <div class="menu-responsivo">
+                <img src="./imgs/menu.png" alt="">
+            </div>
             <nav>
                 <ul class="menu">
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Fotos</a></li>
-                    <li><a href="#">Eventos</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./galeria.html">Fotos</a></li>
+                    <li><a href="./eventos.html">Eventos</a></li>
                     <li><a href="#">Calendário</a></li>
-                    <li><input class="doacao" type="button" value="Doação"></li>
+                    <li class="tema-container"><img class="icon-tema" src="./imgs/dark-mode.png" alt=""></li>
+                    <li><a class="doacao" href="./selecione_pagamento.html">Doação</a></li>
+                    <li class="nomeHeader"></li>
                 </ul>
             </nav>
-
+    
         </header>
 
         <section class="principal">
 
-            <h1>Unindo Corações Através do Esporte</h1>
+            <h1>Unindo Corações<br>Através do Esporte</h1>
             <p>Uma ONG dedicada a conectar pessoas de todas as idades e habilidades</p>
-            <button>Participe já!</button>
+            <a href='login.html'>Participe já!</a>
 
             <img class="pessoa futebol" src="./imgs/futebol-semfundo.png" alt="">
             <img class="pessoa basquete" src="./imgs/basquete-semfundo.png" alt="">
@@ -100,26 +108,78 @@
         </section>
 
         <section class="numeros">
+            <div class="background-numeros"></div>
 
             <div>
-                <span class="numero">12</span>
+                <span class="numero ano" data-count="12">0</span>
                 <span class="frase">Anos atuando</span>
             </div>
             <div>
-                <span class="numero">672</span>
+                <span class="numero pessoas" data-count="672">0</span>
                 <span class="frase">Corações<br>impactados</span>
             </div>
             <div>
-                <span class="numero">485</span>
+                <span class="numero eventos" data-count="157">0</span>
                 <span class="frase">Eventos<br>realizados</span>
             </div>
 
         </section>
 
 
+
+        <section class="contato-geral">
+            <h2>Contato</h2>
+            <div class="contato-bottom">
+                <div class="texto">
+                    <span class="margin">Entre em contato com a gente:</span>
+
+                    <span class="colorido">Telefone:</span>
+                    <span class="margin">(21) 99999-9999 | (21) 9999-9999</span>
+
+                    <span class="colorido">Email:</span>
+                    <span class="margin">contato@ong.com.br</span>
+
+                    <span class="colorido">Horario de funcionamento:</span>
+                    <span class="margin">8:00 às 18:00</span>
+
+                    <span>Se preferir, preencha o formulário ao lado<br> que entraremos em contato com você!</span>
+                </div>
+                <form action="#" class="form-email">
+
+                    <input type="email" placeholder="E-mail" class="email">
+                    <input type="text" placeholder="Assunto" class="assunto">
+                    <textarea name="" id="" placeholder="Mensagem..." rows="" cols="" class="mensagem"></textarea>
+
+                    <input onclick="enviarEmail()" type="button" value="Enviar" class="btn-submit">
+                </form>
+            </div>
+        </section>
+
+
     </main>
 
+    <footer>Movimente-se Rio - 2024 © Todos os direitos reservados</footer>
 
+
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script> <!-- Api de email -->
+
+    <script>
+        function enviarEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "ongmovimenteserio@gmail.com",
+                Password: "948F4C418CECBC9185BD15921FFB37161909",
+                To: 'ongmovimenteserio@gmail.com',
+                From: "ongmovimenteserio@gmail.com",
+                Subject: `${document.querySelector('.assunto').value}`,
+                Body: `Email: ${document.querySelector('.email').value}\n\nMensagem: ${document.querySelector('.mensagem').value}`
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
 </body>
 
 </html>

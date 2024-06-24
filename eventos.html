@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="./css/eventos.css">
+    <script src="./js/tema.js" defer></script>
+    <script src="./js/responsivo.js" defer></script>
+    <script src="./js/slider.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <a class="logo" href="index.html"><img src="./imgs/logo.png" alt="Logo">Movimente-se Rio</a>
+
+        <div class="menu-responsivo">
+            <img src="./imgs/menu.png" alt="">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./galeria.html">Fotos</a></li>
+                <li><a href="./eventos.html">Eventos</a></li>
+                <li><a href="#">Calendário</a></li>
+                <li class="tema-container"><img class="icon-tema" src="./imgs/dark-mode.png" alt=""></li>
+                <li><a class="doacao" href="./selecione_pagamento.html">Doação</a></li>
+                <li class="nomeHeader"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="slider">
+            <svg onclick="voltar()" class="left" fill="#000000" height="50px" width="50px" version="1.1"  viewBox="0 0 55.752 55.752" xml:space="preserve">
+                <g>
+                    <path d="M43.006,23.916c-0.28-0.282-0.59-0.52-0.912-0.727L20.485,1.581c-2.109-2.107-5.527-2.108-7.637,0.001
+		c-2.109,2.108-2.109,5.527,0,7.637l18.611,18.609L12.754,46.535c-2.11,2.107-2.11,5.527,0,7.637c1.055,1.053,2.436,1.58,3.817,1.58
+		s2.765-0.527,3.817-1.582l21.706-21.703c0.322-0.207,0.631-0.444,0.912-0.727c1.08-1.08,1.598-2.498,1.574-3.912
+		C44.605,26.413,44.086,24.993,43.006,23.916z" />
+                </g>
+            </svg>
+
+            <div class="imagens-slider">
+                <div class="imagem-slider imagem-slider-1">
+                    <h2>Título da Imagem</h2>
+                    <h3>Título on Hover</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, placeat nesciunt? Incidunt ea quod consequatur sequi iure minima, ab perspiciatis, nisi, doloremque excepturi velit nam delectus quia voluptatem veniam saepe.</p>
+                    <img src="./imgs/slider-1.png" alt="">
+                </div>
+                <div class="imagem-slider imagem-slider-2">
+                    <h3>Título on Hover</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa blanditiis dolorum perferendis assumenda, eius sequi ad iusto asperiores quo, id eaque harum nisi, distinctio natus rem eos fuga sunt alias!</p>
+                    <img src="./imgs/slider-2.jpeg" alt="">
+                </div>
+                <div class="imagem-slider imagem-slider-3">
+                    <h3>Título on Hover</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit perferendis pariatur magni velit illum sint veritatis eos. Ratione, assumenda nostrum quisquam voluptas amet pariatur ipsum nesciunt nobis ab veritatis modi.</p>
+                    <img src="./imgs/slider-3.jpeg" alt="">
+                </div>
+                <div class="imagem-slider imagem-slider-4">
+                    <h3>Título on Hover</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fugit, ex repellendus quo architecto quaerat dolorum laudantium, dicta consequatur explicabo, sit obcaecati adipisci blanditiis deleniti labore officiis quisquam praesentium et!</p>
+                    <img src="./imgs/slider-4.jpeg" alt="">
+                </div>
+            </div>
+
+            <svg onclick="avancar()" class="right" fill="#000000" height="50px" width="50px" version="1.1"  viewBox="0 0 55.752 55.752" xml:space="preserve">
+                <g>
+                    <path d="M43.006,23.916c-0.28-0.282-0.59-0.52-0.912-0.727L20.485,1.581c-2.109-2.107-5.527-2.108-7.637,0.001
+		c-2.109,2.108-2.109,5.527,0,7.637l18.611,18.609L12.754,46.535c-2.11,2.107-2.11,5.527,0,7.637c1.055,1.053,2.436,1.58,3.817,1.58
+		s2.765-0.527,3.817-1.582l21.706-21.703c0.322-0.207,0.631-0.444,0.912-0.727c1.08-1.08,1.598-2.498,1.574-3.912
+		C44.605,26.413,44.086,24.993,43.006,23.916z" />
+                </g>
+            </svg>
+        </section>
+
+        <section class="eventos">
+            <h2>EVENTOS</h2>
+
+            <div class="container-secao">
+                <span>Próximos Eventos</span>
+                <div class="slider-eventos">
+                    
+                    <div class="seta retornar"><img src="./imgs/next.svg" alt=""></div>
+                    <div class="card">
+                        <img src="./imgs/evento-tenis.png" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Qua</span>
+                                <span>26 Jun</span>
+                                <span>15:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Tênis</span>
+                                <span>Adultos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./imgs/velhas_fut.jpeg" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Sex</span>
+                                <span>28 Jun</span>
+                                <span>18:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Futebol</span>
+                                <span>Adultos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./imgs/nataco.png" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Sáb</span>
+                                <span>29 Jun</span>
+                                <span>14:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Natação</span>
+                                <span>Crianças</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./imgs/nataco.png" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Sáb</span>
+                                <span>29 Jun</span>
+                                <span>19:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Natação</span>
+                                <span>Adultos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seta avancar"><img src="./imgs/next.svg" alt=""></div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container-secao">
+                <span>Esgotando</span>
+                <div class="slider-eventos">
+                    <div class="seta retornar"><img src="./imgs/next.svg" alt=""></div>
+                    <div class="card">
+                        <img src="./imgs/velhas_fut.jpeg" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Sex</span>
+                                <span>28 Jun</span>
+                                <span>18:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Futebol</span>
+                                <span>Adultos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+
+                    <div class="card">
+                        <img src="./imgs/nataco.png" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Sáb</span>
+                                <span>29 Jun</span>
+                                <span>14:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Natação</span>
+                                <span>Crianças</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./imgs/nataco.png" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Sáb</span>
+                                <span>29 Jun</span>
+                                <span>19:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Natação</span>
+                                <span>Adultos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/evento-tenis.png" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Qua</span>
+                                <span>26 Jun</span>
+                                <span>15:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Tênis</span>
+                                <span>Livre</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seta avancar"><img src="./imgs/next.svg" alt=""></div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="container-secao">
+                <span>Outros</span>
+                <div class="slider-eventos">
+                    
+                    <div class="seta retornar"><img src="./imgs/next.svg" alt=""></div>
+                    <div class="card">
+                        <img src="./imgs/evento-tenis.png" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Qua</span>
+                                <span>26 Jun</span>
+                                <span>15:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Tênis</span>
+                                <span>Adultos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./imgs/velhas_fut.jpeg" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Sex</span>
+                                <span>28 Jun</span>
+                                <span>18:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Futebol</span>
+                                <span>Adultos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./imgs/nataco.png" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Sáb</span>
+                                <span>29 Jun</span>
+                                <span>14:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Natação</span>
+                                <span>Crianças</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./imgs/nataco.png" alt="">
+                        <div class="card-bot">
+                            <div class="card-bot-e">
+                                <span class="bold">Sáb</span>
+                                <span>29 Jun</span>
+                                <span>19:00</span>
+                            </div>
+                            <div class="card-bot-d">
+                                <span class="bold">Natação</span>
+                                <span>Adultos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seta avancar"><img src="./imgs/next.svg" alt=""></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>Movimente-se Rio - 2024 © Todos os direitos reservados</footer>
+</body>
+</html>
